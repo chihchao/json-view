@@ -2,6 +2,10 @@
 
 一個使用 HTML、CSS、JavaScript 製作的前端小工具。
 
+## 線上 Demo
+
+- https://chihchao.github.io/json-view/
+
 使用者可以貼上 JSON 內容，檢查格式是否正確，並進行：
 - 縮排排版（Pretty Print）
 - 壓縮成單行（Minify）
