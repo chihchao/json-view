@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON 格式檢查與排版工具</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>JSON 格式檢查工具</h1>
+        <p>貼上 JSON，立即檢查格式，並可一鍵排版或壓縮成單行。</p>
+      </header>
+
+      <section class="panel">
+        <label for="jsonInput">輸入 JSON</label>
+        <textarea
+          id="jsonInput"
+          placeholder="請在這裡貼上 JSON..."
+          spellcheck="false"
+        ></textarea>
+
+        <div class="actions">
+          <button id="validateBtn" type="button">驗證 JSON</button>
+          <button id="prettyBtn" type="button">格式化縮排</button>
+          <button id="minifyBtn" type="button">壓縮成單行</button>
+          <button id="copyBtn" type="button">複製結果</button>
+          <button id="uploadBtn" type="button" class="ghost">上傳 .json</button>
+          <button id="downloadBtn" type="button" class="ghost">下載排版 JSON</button>
+          <button id="clearBtn" type="button" class="ghost">清空</button>
+        </div>
+
+        <input id="fileInput" type="file" accept=".json,application/json" hidden />
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <div class="preview">
+          <div class="preview-title">語法上色預覽</div>
+          <pre id="jsonPreview" class="json-output" aria-live="polite"></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
